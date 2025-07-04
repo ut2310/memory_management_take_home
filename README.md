@@ -88,4 +88,4 @@ print(f'Token counter works: {tc.count_tokens(\"test\")} tokens')
 
 ## Expected Deliverable
 
-Working code that demonstrates a better memory management approach with evidence that it's superior to the current system. 
+Working code that demonstrates a better memory management approach with evidence that it's superior to the current system.
