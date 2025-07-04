@@ -66,6 +66,10 @@ src/
 ## Setup
 
 ```bash
+python -m venv venv
+
+source venv/bin/activate
+
 pip install -r requirements.txt
 ```
 
@@ -75,15 +79,6 @@ NEO4J_URI=neo4j+s://your-instance.databases.neo4j.io
 NEO4J_USERNAME=neo4j  
 NEO4J_PASSWORD=your-password
 OPENAI_API_KEY=sk-your-key
-```
-
-**Test basic functionality:**
-```bash
-python -c "
-from src.token_counter import TokenCounter
-tc = TokenCounter()
-print(f'Token counter works: {tc.count_tokens(\"test\")} tokens')
-"
 ```
 
 ## Expected Deliverable
