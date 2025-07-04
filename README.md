@@ -26,10 +26,10 @@ The agent executes tools like:
 - Integration method calls
 - etc
 
-Each tool execution generates results that consumes the token space within the prompt. 
+Each tool execution generates results that consume the token space within the prompt. 
 We want a system that allows the agent to, much like a human, remove information from immediate information as it's less needed, add stored information back into context in the future as needed, etc. 
 
-Your goal is to understand how the tool calls for our DevOps agent work, understand how the current method of memory management works, improve the method in some set of ways, implement some level of evaluation to the best of your ability to demonstrate that your method was an actual improvement over the current setup. The method od evaluation and the metrics you are using for evaluation are mostly up to you, but make sure to use metrics that makes the most sense given the background you have been given.
+Your goal is to understand how the tool calls for our DevOps agent work, understand how the current method of memory management works, improve the method in some set of ways, and implement some level of evaluation to the best of your ability to demonstrate that your method was an actual improvement over the current setup. The method of evaluation and the metrics you are using for evaluation are mostly up to you, but make sure to use metrics that makes the most sense given the background you have been given.
 
 The system uses:
 - **Neo4j graph database** for storing tool results and relationships
