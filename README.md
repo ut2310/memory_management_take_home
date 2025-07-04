@@ -78,5 +78,6 @@ OPENAI_API_KEY=sk-your-key
 ```
 
 ## Expected Deliverable
+You have 4 hours to complete the task. In those 4 hours we will be available for questions, but the codebase should be clear enough for you to make great progress without much need for questions. 
 
 Working code that demonstrates a better memory management approach with evidence that it's superior to the current system.
