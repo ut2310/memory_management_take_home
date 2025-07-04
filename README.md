@@ -80,4 +80,6 @@ OPENAI_API_KEY=sk-your-key
 ## Expected Deliverable
 You have starting Saturday at 12 AM PST to Sunday 8 PM PST to finish the task. Within this time frame feel free to send bactches of questions, but the codebase should be clear enough for you to make great progress without much need for questions. 
 
+After the alotted time period has completed we'll have a call where you will need to walk us through your exploration process, code, and final results.
+
 The goal is to have working code that demonstrates a better memory management approach with some evidence that it's superior to the current system.
