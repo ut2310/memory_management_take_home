@@ -94,7 +94,7 @@ python demo_compression.py
 This gives you a concrete example of how an agent would manage its memory throughout a complex DevOps workflow, maintaining efficiency while preserving access to detailed information when needed.
 
 ## Expected Deliverable
-You have starting Saturday at 12 AM PST to Sunday 8 PM PST to finish the task. Within this time frame feel free to send bactches of questions, but the codebase should be clear enough for you to make great progress without much need for questions. 
+You have starting Saturday at 12 AM PST to Sunday 8 PM PST to finish the task. Within this time frame feel free to send questions to rithvikprakki@a37.ai, but the codebase should be clear enough for you to make great progress without much need for questions. 
 
 After the alotted time period has completed we'll have a call where you will need to walk us through your exploration process, code, and final results.
 
