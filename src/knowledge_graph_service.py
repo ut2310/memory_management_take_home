@@ -4,11 +4,11 @@ from typing import Dict, List, Optional, Tuple, Any, Set
 from datetime import datetime
 from termcolor import colored
 
-from .neo4j_service import Neo4jService
-from .models import RelationshipType, ToolResult, ToolSummary
-from .token_counter import TokenCounter
-from .llm_service import LLMService, Message
-from .tool_summary_prompts import TOOL_SUMMARY_PROMPT
+from neo4j_service import Neo4jService
+from models import RelationshipType, ToolResult, ToolSummary
+from token_counter import TokenCounter
+from llm_service import LLMService, Message
+from tool_summary_prompts import TOOL_SUMMARY_PROMPT
 
 
 class KnowledgeGraphService:

@@ -77,6 +77,22 @@ NEO4J_PASSWORD=your-password
 OPENAI_API_KEY=sk-your-key
 ```
 
+## Live Demo
+
+**`demo_compression.py`** - A demonstration of how the agent's memory management cam work in practice:
+
+The agent continuously summarizes tool results as they're executed, running in parallel with planning the next action to maximize efficiency
+
+Demonstrates how related tool executions (e.g., AWS operations, file modifications) get grouped and compressed when memory pressure increases. Shows how the agent selectively expands compressed tools back to full detail when that specific information becomes relevant for future actions. Illustrates the complete workflow from raw tool results → summaries → compression → selective expansion based on what the agent needs to know
+
+Run with:
+
+```bash
+python demo_compression.py
+```
+
+This gives you a concrete example of how an agent would manage its memory throughout a complex DevOps workflow, maintaining efficiency while preserving access to detailed information when needed.
+
 ## Expected Deliverable
 You have starting Saturday at 12 AM PST to Sunday 8 PM PST to finish the task. Within this time frame feel free to send bactches of questions, but the codebase should be clear enough for you to make great progress without much need for questions. 
 

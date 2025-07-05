@@ -1,7 +1,7 @@
 import os
 from typing import Dict, List
-from .neo4j_adapter import Neo4jAdapter
-from .models import RelationshipType
+from neo4j_adapter import Neo4jAdapter
+from models import RelationshipType
 
 
 class Neo4jService:
