@@ -2,17 +2,17 @@
 
 ## Motivation
 
-As AI application have moved away from single turn inference to multi turn agents, new problems have arisen that need to be addressed to allow agents to run for long periods of time while maintaining great efficacy.
+As AI applications have moved from single-turn inference to multi-turn agents, new challenges have emerged that must be addressed to keep agents running for long periods while maintaining high efficacy.
 
-One such problem is the problem of memory. As agents interact with their environment they receive environmental feedback and all this information needs to be stored in the context of the agent. However, given that the environmental feedback is context heavy and/or the agent is interacting with the environment for a large number of turns, storing the actions of the agent and their results is no longer feasible due to limits in input context.
+One major challenge is memory. As agents interact with their environment, they receive feedback that must be retained in context. However, this feedback is often context-heavy and/or accumulates over many turns, making it infeasible to store full action histories and results within input context limits.
 
-To solve this problem we need "memory" so the agent is able to remember/reference past actions and results to aid it in contuining to achieve the goal with as minimal loss in performance as possible. 
+To solve this, we need memory so the agent can recall past actions and results, helping it continue toward the goal with minimal performance loss. 
 
 ## Goal
 
-In an ideal situation the agent would be able to remember everything it did within the pursuit of a goal in it's full representation. So a good memory system, gets us as close to this ideal state as possible while still operating within the constraints of limited input context size. 
+In an ideal situation, the agent would remember everything it did in pursuit of a goal in its full representation. A good memory system gets us as close to this ideal as possible while still operating within input context constraints. 
 
-Your goal is to understand how the DevOps agent work, understand how the current method of memory management works, improve the method in some set of ways, and implement some level of evaluation to the best of your ability to demonstrate that your method was an actual improvement over the current setup. The method of evaluation and the metrics you are using for evaluation are mostly up to you, but make sure to use metrics that makes the most sense given the background you have been given.
+Your goal is to understand how the DevOps agent works, understand the current memory-management approach, improve it, and implement an evaluation to demonstrate that your method is an improvement over the current setup. The evaluation method and metrics are up to you; choose metrics that make the most sense given the background provided.
 
 ## What You're Working With
 
@@ -50,7 +50,7 @@ The agent's action space consists of these tools and these are the only outputs 
   </workflow_control>
 
 
-This agent we're building memory management for takes theses inputs:
+This agent we're building memory management for takes these inputs:
 
 1. Plan Steps
 
@@ -113,15 +113,15 @@ Output: {
     "Arn": "arn:aws:iam::980921723213:user/sritan-iam"
 }
 
-3. A list of integrations that the user has configured. Per project the user can configure certain integrations (e.g. AWS, GCP, Grafana, Splunk, etc). The agent is able to call prebuilt tools specific to these integrations, so it's notified of what's available. Example list:
+3. A list of integrations that the user has configured. Per project, the user can configure integrations (e.g., AWS, GCP, Grafana, Splunk). The agent can call prebuilt tools specific to these integrations, so it’s notified of what’s available. Example list:
 
 ["AWS", "GCP", "Splunk"]
 
-4. Integration Methods that the agent has retrieved. This field starts out empty and only get's populated when the agent runs it's method retrieval tool. This tool allows the agent to query a large set of tools with natural language  and get the tools it needs to take an action within some integration. An Example Method:
+4. Integration methods that the agent has retrieved. This field starts out empty and only gets populated when the agent runs its method-retrieval tool. This tool allows the agent to query a large set of tools with natural language and get the tools it needs to take an action within an integration. Example:
 
 <tool>{{name: "aws.connect.ListContactFlowVersions", params: {{Region: string (optional), InstanceId: string (required), ContactFlowId: string (required), NextToken: string (optional), MaxResults: integer (optional)}}, description: "Lists all the versions for the specified flow.. Docstring: Returns all the available versions for the specified Amazon Connect instance and flow identifier.    See also: `AWS API Documentation <https://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListContactFlowVersions>`_   **Request Syntax** ::    response = client.list_contact_flow_versions(       InstanceId='string',       ContactFlowId='string',       NextToken='string',       MaxResults=123   )    :type InstanceId: string :param InstanceId: **[REQUIRED]**     The identifier of the Amazon Connect instance.       :type ContactFlowId: string :param ContactFlowId: **[REQUIRED]**     The identifier of the flow.       :type NextToken: string :param NextToken:     The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next se…"}}</tool>
 
-5. A dict of detected IAC languages present in the codebase with their versions. The languages specifically include terraform, terraform cdk, ansible, pulumi, and aws cdk. The present languages and versions are indexed by folder. Example:
+5. A dict of detected IaC languages present in the codebase with their versions. The languages specifically include Terraform, Terraform CDK, Ansible, Pulumi, and AWS CDK. The detected languages and versions are indexed by folder. Example:
 
 {
     example_folder: {
@@ -182,7 +182,7 @@ NEO4J_PASSWORD=your-password
 OPENAI_API_KEY=sk-your-key
 ```
 
-You should make your own keys for Neo4j, Openai API Key will be provided
+Use your own Neo4j credentials; an OpenAI API key will be provided.
 
 #### Agent Execution Data
 
@@ -192,11 +192,11 @@ You should make your own keys for Neo4j, Openai API Key will be provided
 
 #### Live Demo
 
-**`demo_compression.py`** - A demonstration of how the agent's memory management cam work in practice:
+**`demo_compression.py`** - A demonstration of how the agent's memory management can work in practice:
 
-The agent continuously summarizes tool results as they're executed, running in parallel with planning the next action to maximize efficiency
+The agent continuously summarizes tool results as they are executed, in parallel with planning the next action, to maximize efficiency.
 
-Demonstrates how related tool executions (e.g., AWS operations, file modifications) get grouped and compressed when memory pressure increases. Shows how the agent selectively expands compressed tools back to full detail when that specific information becomes relevant for future actions. Illustrates the complete workflow from raw tool results → summaries → compression → selective expansion based on what the agent needs to know
+It demonstrates how related tool executions (e.g., AWS operations, file modifications) are grouped and compressed when memory pressure increases. It also shows how the agent selectively expands compressed tools back to full detail when that information becomes relevant. It illustrates the workflow from raw tool results → summaries → compression → selective expansion based on what the agent needs.
 
 Run with:
 
@@ -211,17 +211,17 @@ This gives you a concrete example of how an agent would manage its memory throug
 
 ### Caveats
 
-You don't have access to running the actual agent, so you will have to operate in this space of limited testing ability.
-  - Using synthetically generated data can be very helpful
+You don't have access to running the actual agent, so you will need to operate with limited testing ability.
+  - Using synthetically generated data can be very helpful.
 
 ### Final Deliverable
-You need to expand upon or design a new memory system that will exceed the performance of the current system. The goal you are optimizing for is to have a system that minimizes the amount of repeated tool calls due to forgetting. If the agent makes a tool call it already made previously purely because it didn't have enough information about it context and not for an other reason (e.g. the tool call errored before, the environment changed since a tool call was last run and now the tool call has different expected outputs), then the agent memory management has room for improvement. 
+You need to expand upon, or design, a new memory system that will exceed the performance of the current system. The goal you are optimizing for is a system that minimizes repeated tool calls caused by forgetting. If the agent makes a tool call it already made previously purely because it didn't have enough information about its context—and not for another reason (e.g., the tool call previously failed, or the environment changed since the last run and now the call has different expected outputs)—then the agent's memory management has room for improvement. 
 
-You must also build some level of metrics/evals to demonstrate that you're memory management system is better. As stated in the caveat this can be hard to do given you don't have access to the main agent, but given the prompt geneerating synthetic data can help compare different systems.
+You must also build some level of metrics/evaluations to demonstrate that your memory management system is better. As stated in the caveats, this can be hard to do given you don't have access to the main agent; however, given the prompt, generating synthetic data can help compare different systems.
 
 There is a lot of room for exploration within this task, so feel free to take your own route and use the ideas presented above very minimally. 
 
 ## Logistics
-You have starting Saturday at 12 AM PST to Sunday 8 PM PST to finish the task. Within this time frame feel free to send batches of questions as necessary to rithvik@a37.ai.
+You have from Saturday at 12 AM PST to Sunday at 8 PM PST to finish the task. During this time, feel free to send batches of questions to rithvik@a37.ai.
 
-After the alotted time period has completed we'll have a call where you will need to walk us through your exploration process, code, and final results.
+After the allotted time period, we'll schedule a call where you'll walk us through your exploration process, code, and final results.
