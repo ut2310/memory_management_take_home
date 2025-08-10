@@ -222,6 +222,6 @@ You must also build some level of metrics/evaluations to demonstrate that your m
 There is a lot of room for exploration within this task, so feel free to take your own route and use the ideas presented above very minimally. 
 
 ## Logistics
-You have from Saturday at 12 AM PST to Sunday at 8 PM PST to finish the task. During this time, feel free to send batches of questions to rithvik@a37.ai.
+You have the alloted time provided in the email to finish the task. During this time, feel free to send batches of questions to rithvik@a37.ai.
 
 After the allotted time period, we'll schedule a call where you'll walk us through your exploration process, code, and final results.
