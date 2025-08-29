@@ -187,6 +187,7 @@ Output:
     "Arn": "arn:aws:iam::980921723213:user/sritan-iam"
 }
 ```
+```
 
 **3. Configured Integrations List**
 
