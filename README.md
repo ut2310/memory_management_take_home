@@ -180,13 +180,11 @@ AWS METHODS:
 Input: {"command": "aws sts get-caller-identity"}
 Result: success
 Output: 
-```json
 {
     "UserId": "AIDA6IY35VFGU4ESXCB6M",
     "Account": "980921723213",
     "Arn": "arn:aws:iam::980921723213:user/sritan-iam"
 }
-```
 ```
 
 **3. Configured Integrations List**
