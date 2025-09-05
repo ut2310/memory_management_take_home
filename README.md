@@ -331,6 +331,8 @@ There is a lot of room for exploration within this task, so feel free to take yo
 
 You have the alloted time provided in the email to finish the task. During this time, feel free to send batches of questions to **rithvik@a37.ai**.
 
+Make a PR once you're done.
+
 After the allotted time period, we'll schedule a call where you'll walk us through your:
 - **Exploration process**
 - **Code implementation**  
