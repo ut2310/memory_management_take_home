@@ -4,9 +4,9 @@
 
 As AI applications have moved from single-turn inference to multi-turn agents, new challenges have emerged that must be addressed to keep agents running for long periods while maintaining high efficacy.
 
-One major challenge is memory. As agents interact with their environment, they receive feedback that must be retained in context. However, this feedback is often context-heavy and/or accumulates over many turns, making it infeasible to store full action histories and results within input context limits.
+One major challenge is memory. As agents interact with their environment, they receive feedback that must be retained in context. However, this feedback is often token-heavy and/or accumulates over many turns, making it infeasible to store full action histories and results within input context limits.
 
-To solve this, we need memory so the agent can recall past actions and results, helping it continue toward the goal with minimal performance loss. 
+To solve this, we need sophisticated memory systems that allow agents to recall and build upon past actions and results—much like how humans selectively remember key details from previous experiences while letting less important information fade. This enables agents to maintain context and continue toward their goals without constantly re-discovering what they've already learned. 
 
 ## Goal
 
@@ -319,7 +319,7 @@ You need to expand upon, or design, a **new memory system** that will exceed the
 
 If the agent makes a tool call it already made previously purely because it didn't have enough information about its context—and not for another reason (e.g., the tool call previously failed, or the environment changed since the last run and now the call has different expected outputs)—then the agent's memory management has room for improvement.
 
-There is a lot of room for exploration within this task, so feel free to take your own route and use the ideas presented above to the extent you see fit. 
+There is a lot of room for exploration within this task. Feel free to take your own route and use the ideas presented above to the extent you see fit. Feel free to even ignore the existing codebase and implement your own approach from scratch if you prefer. 
 
 ---
 
