@@ -1,4 +1,4 @@
-# Memory Management Take-Home Assignment
+# Memory Management
 
 ## Motivation
 
