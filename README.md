@@ -12,7 +12,7 @@ To solve this, we need sophisticated memory systems that allow agents to recall 
 
 In an ideal situation, the agent would remember everything it did in pursuit of a goal in its full representation. A good memory system gets us as close to this ideal as possible while still operating within input context constraints. 
 
-Your goal is to understand how the DevOps agent works, understand the current memory-management approach, and improve it.
+Your goal is to understand how the DevOps agent works, understand the current memory-management approach, and either improve it or implement a new approach.
 
 ## What You're Working With
 
