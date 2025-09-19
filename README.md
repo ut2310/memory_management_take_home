@@ -12,7 +12,7 @@ To solve this, we need memory so the agent can recall past actions and results, 
 
 In an ideal situation, the agent would remember everything it did in pursuit of a goal in its full representation. A good memory system gets us as close to this ideal as possible while still operating within input context constraints. 
 
-Your goal is to understand how the DevOps agent works, understand the current memory-management approach, improve it, and implement an evaluation to demonstrate that your method is an improvement over the current setup. The evaluation method and metrics are up to you; choose metrics that make the most sense given the background provided.
+Your goal is to understand how the DevOps agent works, understand the current memory-management approach, and improve it.
 
 ## What You're Working With
 
@@ -319,11 +319,7 @@ You need to expand upon, or design, a **new memory system** that will exceed the
 
 If the agent makes a tool call it already made previously purely because it didn't have enough information about its context—and not for another reason (e.g., the tool call previously failed, or the environment changed since the last run and now the call has different expected outputs)—then the agent's memory management has room for improvement.
 
-#### Requirements
-
-You must also build some level of **metrics/evaluations** to demonstrate that your memory management system is better. As stated in the caveats, this can be hard to do given you don't have access to the main agent; however, given the prompt, generating synthetic data can help compare different systems.
-
-There is a lot of room for exploration within this task, so feel free to take your own route and use the ideas presented above very minimally. 
+There is a lot of room for exploration within this task, so feel free to take your own route and use the ideas presented above to the extent you see fit. 
 
 ---
 
